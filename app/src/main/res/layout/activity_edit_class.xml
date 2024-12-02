@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back to Main"
+            android:padding="8dp"
+            android:layout_gravity="start" />
+
+        <!-- Label for Day -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Day"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="4dp"/>
+
+        <!-- Day of the Week -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/editTextDay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Select or enter day (e.g., 01/10/2024)"
+                    android:minHeight="48dp"
+                    android:background="@android:color/white"
+                    android:padding="8dp" />
+
+                <ImageView
+                    android:id="@+id/buttonSelectDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    android:contentDescription="Select Date"
+                    android:padding="8dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Label for Time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Time"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="4dp"/>
+
+        <!-- Time of Class -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/editTextTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Select or enter time (e.g., 13:48)"
+                    android:minHeight="48dp"
+                    android:background="@android:color/white"
+                    android:padding="8dp" />
+
+                <ImageView
+                    android:id="@+id/buttonPickTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_access_time_24"
+                    android:contentDescription="Pick Time"
+                    android:padding="8dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Label for Capacity -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Capacity"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="4dp"/>
+
+        <!-- Capacity -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/editTextCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter class capacity"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Label for Duration -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Duration"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="4dp"/>
+
+        <!-- Duration -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/editTextDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter class duration (minutes)"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Label for Teacher -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Teacher Name"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="4dp"/>
+
+        <!-- Teacher -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter teacher's name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Label for Price -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Price"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="4dp"/>
+
+        <!-- Price per Class -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/editTextPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter class price"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:minHeight="48dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Label for Class Type -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Class Type"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="4dp"/>
+
+        <!-- Type of Class -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <Spinner
+                android:id="@+id/spinnerTypeOfClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:minHeight="48dp"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Label for Difficulty Level -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Difficulty Level"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="4dp"/>
+
+        <!-- Difficulty Level -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <Spinner
+                android:id="@+id/spinnerDifficulty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:minHeight="48dp"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Label for Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Class Description"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="4dp"/>
+
+        <!-- Description -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:hint="Enter class description"
+                android:inputType="textMultiLine"
+                android:minHeight="56dp"
+                android:padding="16dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#6200EE"
+            android:padding="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

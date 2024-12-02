@@ -1,0 +1,60 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/background_light">
+
+        <!-- Back Icon -->
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back Icon"
+            android:layout_gravity="start"
+            android:padding="8dp"
+            app:tint="@color/primaryColor" />
+
+        <!-- AutoCompleteTextView for Teacher Search -->
+        <AutoCompleteTextView
+            android:id="@+id/searchTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Teacher Name"
+            android:padding="12dp"
+            android:minHeight="48dp"
+            android:background="@drawable/edittext_border"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"
+            android:completionThreshold="1" />
+
+        <!-- TextView for displaying search result message -->
+        <TextView
+            android:id="@+id/textViewSearchResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!-- Dynamic Teacher List -->
+        <LinearLayout
+            android:id="@+id/teacherListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Yoga Manager</string>
+    <string name="hint_day">Day of the week</string>
+    <string name="hint_time">Time of course</string>
+    <string name="hint_capacity">Capacity</string>
+    <string name="hint_duration">Duration (minutes)</string>
+    <string name="hint_price">Price per class</string>
+    <string name="hint_type">Type of class</string>
+    <string name="hint_description">Description (optional)</string>
+    <string name="button_submit">Submit</string>
+    <!-- Other strings already defined -->
+
+    <string-array name="search_categories">
+        <item>Search by Teacher</item>
+        <item>Search by Date</item>
+        <item>Search by Type</item>
+    </string-array>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:attr/colorControlHighlight">
+
+    <!-- Hiệu ứng khi button được nhấn -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#6200EE" /> <!-- Màu nền khi nhấn -->
+            <corners android:radius="12dp" /> <!-- Góc bo tròn -->
+            <stroke android:width="2dp" android:color="#000000" /> <!-- Khung viền -->
+        </shape>
+    </item>
+
+    <!-- Trạng thái mặc định -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" /> <!-- Nền trong suốt -->
+            <corners android:radius="12dp" /> <!-- Góc bo tròn -->
+            <stroke android:width="2dp" android:color="#6200EE" /> <!-- Khung viền màu tím -->
+        </shape>
+    </item>
+
+</ripple>

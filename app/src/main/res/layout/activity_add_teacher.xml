@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AddTeacherActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Back Button/Icon -->
+        <ImageView
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back to Main"
+            android:padding="8dp"
+            android:layout_gravity="start" />
+
+        <!-- Teacher Name -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editTextTeacherName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Teacher Name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Teacher Address -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editTextTeacherAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Teacher Address"
+                android:inputType="textPostalAddress"
+                android:minHeight="48dp"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Teacher Phone -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editTextTeacherPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Teacher Phone"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Teacher Age -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editTextTeacherAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Teacher Age"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Teacher Qualification -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <Spinner
+                android:id="@+id/spinnerQualification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:minHeight="48dp"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Teacher Description -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editTextTeacherDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:minHeight="56dp"
+                android:background="@android:color/white"
+                android:padding="16dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/buttonSubmitTeacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Teacher" />
+
+    </LinearLayout>
+</ScrollView>

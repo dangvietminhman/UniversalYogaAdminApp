@@ -1,0 +1,164 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/background_light">
+
+        <!-- Back Icon -->
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back Icon"
+            android:layout_gravity="start"
+            android:padding="8dp"
+            app:tint="@color/primaryColor" />
+
+        <!-- Search Category CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSearchOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="12dp"
+            android:padding="16dp"
+            app:cardBackgroundColor="@color/white">
+
+            <!-- Search Options Toggle Button -->
+            <LinearLayout
+                android:id="@+id/searchOptionsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textViewSearchCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search Options"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:padding="8dp" />
+
+                <!-- Icon for expand/collapse -->
+                <ImageView
+                    android:id="@+id/iconExpandCollapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_expand_more"
+                    app:tint="@color/black" />
+            </LinearLayout>
+
+            <!-- Search Options (Initially Hidden) -->
+            <LinearLayout
+                android:id="@+id/searchOptionsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="16dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <!-- Search by Type Button -->
+                <Button
+                    android:id="@+id/buttonSearchCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search by Type"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/primaryColor"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="12dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="12dp"
+                    android:elevation="4dp" />
+
+                <!-- Search by Teacher Button -->
+                <Button
+                    android:id="@+id/buttonSearchTeacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search by Teacher"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/primaryColor"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:elevation="4dp" />
+
+                <!-- AutoCompleteTextView for Teacher Search -->
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTeacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Teacher Name"
+                    android:padding="12dp"
+                    android:background="@drawable/edittext_border"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Search by Date Button -->
+                <Button
+                    android:id="@+id/buttonSearchByDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search by Date"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/primaryColor"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:elevation="4dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- TextView for displaying search result message -->
+        <TextView
+            android:id="@+id/textViewSearchResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!-- Dynamic Class List -->
+        <LinearLayout
+            android:id="@+id/classListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp" />
+
+        <Button
+            android:id="@+id/buttonExportToExcel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Export to Excel"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

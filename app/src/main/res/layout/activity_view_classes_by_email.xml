@@ -1,0 +1,71 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Back Button and Title Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp">
+
+        <!-- Back Button Icon -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back"
+            android:tint="#333333"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Title for the page -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Classes Booked by Email"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
+    </LinearLayout>
+
+    <!-- Divider line under the title -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- ListView to display classes with improved styling -->
+    <ListView
+        android:id="@+id/listViewClasses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/gray"
+        android:dividerHeight="1dp"
+        android:background="@drawable/listview_background"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"
+        android:scrollbars="none"/>
+
+    <!-- Button to export invoice as PDF with improved styling -->
+    <Button
+        android:id="@+id/buttonExportInvoice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="EXPORT INVOICE AS PDF"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#6200EE"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="16sp"
+        android:elevation="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"/>
+
+</LinearLayout>

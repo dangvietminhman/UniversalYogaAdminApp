@@ -1,0 +1,54 @@
+<!-- activity_view_booked_classes.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <!-- Back Button Icon and Title Row -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingBottom="16dp">
+
+
+</LinearLayout>
+
+    <!-- SearchView for email search with elevated style -->
+<SearchView
+    android:id="@+id/searchViewEmails"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:queryHint="Search emails"
+    android:background="#FFFFFF"
+    android:elevation="4dp"
+    android:padding="8dp"
+    android:layout_marginBottom="16dp"
+    android:textColor="#333333"
+    android:textSize="16sp"/>
+
+    <!-- Divider for better separation of the search area -->
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#CCCCCC"
+    android:layout_marginBottom="12dp"/>
+
+    <!-- ListView to display emails with padding and background color -->
+<ListView
+    android:id="@+id/listViewEmails"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:divider="#DDDDDD"
+    android:dividerHeight="1dp"
+    android:background="#FFFFFF"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:layout_marginBottom="16dp"/>
+</LinearLayout>

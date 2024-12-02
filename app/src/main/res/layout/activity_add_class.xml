@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Back Button/Icon -->
+        <ImageView
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back to Main"
+            android:padding="8dp"
+            android:layout_gravity="start" />
+
+        <!-- Day of the Week -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/editTextDay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/hint_day"
+                    android:minHeight="48dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:inputType="number"
+                    android:background="@android:color/white"
+                    android:padding="8dp" />
+
+                <ImageView
+                    android:id="@+id/buttonSelectDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    android:contentDescription="Select Date" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Time of Course -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/editTextTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/hint_time"
+                android:minHeight="48dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:inputType="number"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+
+
+
+                <ImageView
+                    android:id="@+id/buttonPickTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_access_time_24"
+                    android:contentDescription="Pick Time" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Capacity -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editTextCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_capacity"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Duration -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editTextDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_duration"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Teacher (AutoCompleteTextView) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select or Enter Teacher"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Price per Class -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editTextPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Price per class"
+                android:inputType="numberDecimal"
+                android:drawableLeft="@drawable/ic_dollar_sign"
+                android:padding="8dp"
+                android:minHeight="48dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Type of Class (Spinner) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <Spinner
+                android:id="@+id/spinnerTypeOfClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:minHeight="48dp"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Difficulty Level (Spinner) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <Spinner
+                android:id="@+id/spinnerDifficulty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:minHeight="48dp"
+                android:padding="8dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Description -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:hint="@string/hint_description"
+                android:inputType="textMultiLine"
+                android:minHeight="56dp"
+                android:padding="16dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/button_submit" />
+
+    </LinearLayout>
+</ScrollView>
